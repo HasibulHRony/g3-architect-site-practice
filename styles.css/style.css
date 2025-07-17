@@ -172,6 +172,67 @@ main>section {
     width: 100%;
 }
 
+/* fact section */
+.fact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10rem;
+    /* justify-content: space-between; */
+}
+
+.fact {
+    border: 5px solid hsl(39, 100%, 40%);
+    border-radius: 15px;
+    margin: .5rem 0;
+    line-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 1.5rem;
+}
+
+.fact>h3 {
+    font-size: 1.75rem;
+}
+
+/* sponsor section */
+.sponsor-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+
+}
+
+.sponsor-description > h2{
+    font-size: 1.75rem;
+}
+
+.sponsors{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsors img{
+    filter: grayscale(100%);
+}
+
+footer{
+    padding: 1rem 2rem;
+    max-width: 100%;
+    text-align: center;
+}
 /* responsive media query */
 @media screen and (max-width: 576px) {
 
@@ -233,11 +294,46 @@ main>section {
         padding: 1rem;
     }
 
-    .feature-image{
+    .feature-image {
         width: 95%;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    /* fact section */
+    .fact-section > h2,
+    .fact-section > p{
+        margin-bottom: 1rem;
+    }
+
+    .facts {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem
+    }
+
+    .fact {
+        border: 5px solid hsl(39, 100%, 40%);
+        border-radius: 15px;
+        margin: .5rem 0;
+        line-height: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem 1.5rem;
+    }
+
+    /* sponsor section */
+    .sponsor-description > h2,
+    .sponsor-description > p{
+        margin-bottom: 1rem;
+    }
+    .sponsors{
+        grid-template-columns: repeat(1, 1fr);
+        margin: auto auto;
+        gap: 1.5rem;
     }
 }
 
@@ -257,17 +353,32 @@ main>section {
         margin: 0 auto;
     }
 
-    .team-description {
+    .team-description,
+    .feature-description {
         gap: 1rem;
         padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
-    .features{
+    .features {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         max-width: 95%;
         padding: 2rem;
+    }
+
+    .facts{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+    .sponsors{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem 0;
     }
 }
